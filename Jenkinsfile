@@ -26,7 +26,7 @@ pipeline {
         stage('Deploy to K8s') {
             steps {
                 sh "sed -i 's|\${DOCKER_HUB_USER}/nodejs-app:\${BUILD_NUMBER}|${DOCKER_HUB_USER}/${IMAGE_NAME}:${BUILD_NUMBER}|g' deployment.yaml"
-                sh "kubectl apply -f deployment.yaml"
+                sh "kubectl apply -f deployment.yaml --validate=false"
             }
         }
     }
