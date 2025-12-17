@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_HUB_USER = 'kendi_kullanici_adin' // Değiştirin
+        DOCKER_HUB_USER = 'galbayrak' // Değiştirin
         IMAGE_NAME = 'nodejs-app'
         REGISTRY_CRED = 'dockerhub-credentials-id' // Jenkins'te tanımlayacağınız ID
     }
